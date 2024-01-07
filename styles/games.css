@@ -1,0 +1,96 @@
+.GridForItems{
+    font-size: 16px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+    margin: 3vw 5vw;
+    padding: 1vw;
+    background-color: #E5CFF7;
+    border-radius: 1% 1%;
+}
+
+@media screen and (max-width: 850px) {
+    .GridForItems{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media  screen and (max-width: 550px) {
+    .GridForItems{
+        grid-template-columns: 1fr;
+    }
+}
+@media  screen and (min-width: 1600px) {
+    .GridForItems{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.GridItem{
+    padding: 1vw;
+    margin: auto;
+    min-height: 150px;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 400px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #713ABC;
+    color: #E5CFF7;
+    border: 3px #5B0888 solid;
+    border-radius: 10%;
+}
+
+.GridItem img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px #5B0888 solid;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rewards{
+    margin-top: 10px;
+}
+.rewards{
+    color: #5B0888;
+}
+
+.GridItem:hover{
+    cursor: pointer;
+    animation: CardHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+.GridItem:not(:hover){
+    animation: CardEndHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes CardHover{
+    0%{
+    }
+
+    100%{
+        transform: scale(105%, 105%);
+    }
+}
+@keyframes CardEndHover{
+    0%{
+        transform: scale(105%, 105%);
+    }
+
+    100%{
+        transform: scale(100%, 100%);
+    }
+}

@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-size: 1.35vw;
+}
+
+body{
+    background-color: #9D76C1;
+
+    font-family: 'Pixelify Sans', sans-serif;
+    }
+input{
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+/*START OF STYLING NAVBAR*/
+/* styling the navigation bar*/
+.nav-bar{
+    display: flex;
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    padding: 0px 15px;
+
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    width: 100%;
+
+
+    border-bottom: 3px solid #5B0888;
+    background-color: #713ABC;
+}
+
+/*styling items inside the navbar*/
+.nav-item{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+}
+
+/*styling the site logo (PixEarn word)*/
+#logo{
+    color: #E5CFF7;
+    font-size: 32px;
+    padding-top: 10px;
+}
+
+/*the button that shows when in mobile*/
+.nav-button-mobile{
+    display: none;
+}
+.nav-button-mobile svg{
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    padding-top: 8px;
+}
+.nav-button-mobile svg:hover{
+    fill: #5B0888;
+    cursor: pointer;
+}
+
+
+/*styling the list of navigation adresses*/
+.link-bar{
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*styling each of the navigation links*/
+.link-bar-item{
+    font-size: 25px;
+    height: 100%;
+    padding: 0 1vw 1vh 1vw;
+}
+.link-bar-item:nth-of-type(1){
+    text-align: right;
+}
+.link-bar-item:nth-of-type(3){
+    text-align: left;
+}
+.link-bar-item:nth-of-type(2){
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+}
+/*styling the link behaviour*/
+.link-bar-item a{
+    color: #E5CFF7;
+    text-decoration: none;
+}
+.link-bar-item a:hover{
+    color: #5B0888;
+}
+
+#logo-link{
+    text-decoration: none;
+}
+
+/*styling the button in the nav bar*/
+.nav-item form{
+    text-align: end;
+    height: 100%;
+}
+.nav-item input{
+    width: 100px;
+    height: 30px;
+    color: #5B0888;
+    background-color: #E5CFF7;
+    margin-top: 10px;
+}
+.nav-item input:hover{
+    background-color: #e3c1fd;   
+    cursor: pointer;
+}
+.nav-item input:active{
+    background-color: #5B0888;
+    color: #E5CFF7;
+}
+/*END OF STYLING NAVBAR*/   
+
+/*styling of coins counter*/ 
+.coins-counter{
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.coins-counter img{
+    width: 40px;
+    height: 40px;
+}
+.coins-counter p{
+    background-color: #e3c1fd;
+    border: 2px #5B0888 solid;
+    min-width: 120px;
+    padding: 3px;
+    font-size: 22px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .nav-links{
+        display: none;
+    }
+
+    .nav-button-mobile{
+        display: inherit;
+    }
+}
+@media screen and (max-width: 400px) {
+    .nav-item:nth-of-type(4){
+        display: none;
+    }
+    .nav-item:nth-of-type(5){
+        position: absolute;
+        top: -500px;
+        width: 0;
+        height: 0;
+    }
+    
+}
+
+/* Styling the footer*/
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+
+}
+footer li{
+    padding: 5px 10px;
+}
+footer a{
+    color: #E5CFF7;
+    text-decoration: none;
+}
+footer p{
+    color: #E5CFF7;
+    text-align: center;
+}
+footer{
+    background-color: #713ABC;
+    border-top: 2px solid #5B0888;
+}
+
+footer a:hover{
+    color: #5B0888;
+}
+
+/*Styling for the drop down menu for mobile devices*/
+.sub-menu-wrap{
+    position: absolute;
+    max-height: 600px;
+    top: -400px;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    font-size: 25px;
+
+}
+.sub-menu{
+    background-color: #713ABC;
+}
+.sub-menu ul{
+    list-style: none;
+}
+.sub-menu li{
+    padding: 20px 0;
+    border: 1px #5B0888 solid;
+}
+.sub-menu a{
+    color: #e3c1fd;
+    text-decoration:none;
+}
+.sub-menu a:hover{
+    color: #5B0888;
+}
+.sub-menu svg{
+    padding-top: 10px;
+    width: 35px;
+    height: 35px;
+}
+#menu-close:hover{
+    fill: #5B0888;
+    cursor: pointer;
+}
+.sub-extra{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px #5B0888 solid;
+}
+
+@keyframes openMenu{
+    0%{
+        top: -600px;
+        display: block;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes closeMenu{
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: -600px;
+        display: none;
+    }
+}
+
+/*styling the signing buttons*/
+  
+  .form-popup {
+    display: none;
+    font-size: 25px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #5B0888;
+    z-index: 9;
+    color: #5B0888;
+  }
+  .form-popup h1{
+    color: #E5CFF7;
+  }
+  
+  .form-container {
+    max-width: 300px;
+    min-width: 300px;
+    padding: 10px;
+    background-color: #713ABC;
+  }
+  
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  .form-container .btn {
+    background-color: #9D76C1;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .form-container .cancel {
+    background-color: #5B0888;
+  }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  .form-popup small{
+    color: #e3c1fd;
+  }
+  .form-popup small:hover{
+    cursor: pointer;
+    color: #5B0888;
+  }
+
+  .overlay-popup{
+    display: none;
+
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 8;
+    background-color: #5B0888;
+    opacity: 0.3;
+  }
+
+.detail{
+    color: #e3c1fd;
+    font-size: 10px;
+}
+

@@ -1,0 +1,27 @@
+#GameContainer{
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#GameInformation{
+    color: #5B0888;
+    background-color: #8353c6;
+    border: 2px #5B0888 solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#GameInformation h1{
+    font-size: 4rem;
+}
+
+#GameInformation p{
+    width: 60%;
+    margin: 15px 0;
+}

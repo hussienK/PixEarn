@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <!--The head Setup - shared between all pages-->
+            <title>PixEarn - Games</title>
+            <link rel="icon" href="../rsrcs/CoinCounter.ico">
+            
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="description" content="This is a site where you play games to earn rewards" />
+    
+            <!--Importing The CSS, the extras is the base style applies to all pages-->
+            <link href="../styles/extras.css" rel="stylesheet" />
+            <link href="../styles/games.css" rel="stylesheet" />
+    
+            <!--Importing the font and icons packs-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Rubik+Pixels&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/f8beca24d9.js" crossorigin="anonymous"></script>
+        </head>
+
+    <body>
+        <!--The navigation bar at the top-->
+        <nav>
+            <div class="nav-bar">
+                <div class="nav-item"><a href="../index.html" id="logo-link"><h2 id="logo">PixEarn</h2></a></div>
+                <div class="nav-item nav-links" >
+                    <ul class="link-bar">
+                        <li class="link-bar-item"><a href="./rewards.html">Rewards</a></li>
+                        <li class="link-bar-item"><a href="./games.html" style="color: #5B0888;">Games</a></li>
+                        <li class="link-bar-item"><a href="./about.html">About</a></li>
+                    </ul>
+                </div>
+                <!--This is an icon from font-awesome.com that's only visible when on mobile-->
+                <div class="nav-item nav-button-mobile">
+                    <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#e5dbff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                </div>
+                <!--The sign in button and money counter, only one is visible at a time, modified through the main.js script-->
+                <div class="nav-item SigningButton">
+                    <form action="">
+                        <input type="button" value="Sign In/Up">
+                    </form>
+                </div>
+                <div class="nav-item coins-counter">
+                        <img src="../imgs/CoinCounter.png"  alt="pic of coin">
+                        <p>666</p>
+                </div>
+            </div>
+
+            <!--This is the navigation bar for mobile users-->
+            <div class="sub-menu-wrap">
+                <div class="sub-menu">
+                    <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#e5dbff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                    <ul>
+                        <li><a href="./rewards.html">Rewards</a></li>
+                        <li><a href="./games.html">Games</a></li>
+                        <li><a href="./about.html">About</a></li>
+                    </ul>
+                    <div class="coins-counter sub-extra" style="display: flex;">
+                        <img src="../imgs/CoinCounter.png"  alt="pic of coin">
+                        <p>666</p>
+                    </div>
+                    <div class="SigningButton sub-extra">
+                        <form action="">
+                            <input type="button" value="Sign In/Up">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- sign in form , starts hidden and is called on by js-->
+        <div class="overlay-popup"></div>
+        <div class="form-popup SignIn" id="myForm">
+                <form action="" class="form-container" onsubmit="return false">
+                    <h1>Login</h1>
+                    <p class="detail">(custom acounts isn't fully implemented, use the provided details below)</p>
+
+                    <label for="username"><b>UserName</b><p class="detail">use "admin" for testing</p></label>
+                    <input id="loginName" type="text" placeholder="Enter username" id="username" name="username" required>
+                
+                    <label for="psw"><b>Password</b><p class="detail">use "password" for testing</p></label>
+                    <input id="loginPassword" type="password" placeholder="Enter Password" id="psw" name="userPasswd" required>
+                
+                    <button type="submit" class="btn SubmitSignin">Login</button>
+                    <button type="button" class="btn cancel SignInC">Close</button>
+                </form>
+        </div>
+        
+        <!--The section to display the main cotent-->
+        <main>
+            <!--The grid to contain all game items, will be filled with js-->
+            <div class="GridForItems">
+            </div>
+        </main>
+
+        <!--The footer of the page with links to my pages-->
+        <footer>
+            <ul>
+                <li><a href="https://github.com/hussienK" target="_blank">Github</a></li>
+                <li><a href="https://hk-studio.itch.io/" target="_blank">Game Site</a></li>
+                <li><a href="https://www.linkedin.com/in/hussein-kanaan-533128231/" target="_blank">LinkedIn</a></li>
+            </ul>
+            <p><b><i>(this website is just a test for the final product and isn't fully functional yet)</b></i></p>
+        </footer>
+
+        <!--The scripts that make the page work, main script is for generics every page needs-->
+        <script src="../scripts/main.js"></script>
+        <script src="../scripts/Games.js"></script>
+        </body>
+</html>

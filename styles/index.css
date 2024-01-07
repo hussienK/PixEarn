@@ -1,0 +1,268 @@
+.intro-section{
+    height: calc(100vh - 60px);
+    width: 100%;
+
+
+    background-image: url(https://wallpaperaccess.com/full/4334572.jpg);
+    background-clip:border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/*the blurred part*/
+.intro-section div{
+    backdrop-filter: blur(8px);
+    height: 100%;
+
+}
+.page-title{
+
+    font-style: bold;
+    text-align: center;
+    font-size: 13rem;
+    color: #E5CFF7;
+
+    width: 100%;
+    padding-top: 5vh;
+    margin: 0 auto;
+
+    animation: TitleMain 5s linear infinite;
+}
+.page-title-description{
+    font-style: italic;
+    text-align: center;
+    font-size: 2.45rem;
+    color: #9D76C1;
+    margin: 0 auto;
+    width: 100%;
+
+    filter: none;
+}
+
+.page-title-form {
+    width: 100%;
+    margin: 5% auto 0px auto;
+
+    display: flex;
+    align-items: center;
+}
+.page-title-sign-button{
+    width: 27.5vw;
+    height: calc(27.5vw / 5.33);
+
+    margin: 0 auto;
+    text-align: center;
+
+    color: #5B0888;
+    background-color: #E5CFF7;
+
+    font-size: 1.5rem;
+}
+.page-title-sign-button:hover{
+    background-color: #e3c1fd;   
+    cursor: pointer;
+}
+.page-title-sign-button:active{
+    background-color: #5B0888;
+    color: #E5CFF7;
+}
+/*second section of teh page*/
+.info-section{
+    width: 100%;
+    padding-bottom: 100px;
+}
+.info-box-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.info-box{
+    width: 450px;
+    background-color: red;
+}
+
+.info-section h1{
+    margin: 50px auto 100px;
+    text-align: center;
+
+    font-style: bold;
+    text-align: center;
+    font-size: 7rem;
+    padding-top: 0.25rem;
+    color: #5B0888;
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 25px;
+
+    background-color: #713ABC;
+}
+
+.info-box img{
+    width: 93%;
+    height: 300px;
+
+    margin: 0 auto;
+
+    object-fit:cover;
+    background-color: black;
+}
+.info-box h2{
+    color: #E5CFF7;
+    font-size: 4rem;
+    padding: 10px 0;
+    text-align: center;
+}
+.info-box p{
+    color: #E5CFF7;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+}
+
+
+#nav-button-mobile{
+    display: none;
+    width: 25px;
+    margin: 0 auto;
+    color: #E5CFF7;
+}
+
+.info-box:hover{
+    animation: CardHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+.info-box:not(:hover){
+    animation: CardEndHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes CardHover{
+    0%{
+    }
+
+    100%{
+        transform: scaleX(110%);
+        transform: scale(105%, 105%);
+    }
+}
+@keyframes CardEndHover{
+    0%{
+    }
+
+    100%{
+        transform: scale(95%, 95%);
+    }
+}
+
+#title-left, #title-right{
+    display: inline-block;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#title-left{
+    animation-name: leftBounce;
+}
+#title-right{
+    animation-name: rightBounce;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(50%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-50%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes leftBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-45px);
+    }
+    60% {
+        transform: translateX(-20px);
+    }
+}
+@keyframes rightBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(45px);
+    }
+    60% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes LeftTitleMove{
+    0%{
+        display: inline-block;
+        transform:translateX(-100vw);
+    }
+    100%{
+        transform:translateX(100vw);
+    }
+}
+@keyframes RightTitleMove{
+    0%{
+        display: inline-block;
+        transform:translateX(100vw);
+    }
+    100%{
+        transform:translateX(-100vw);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .page-title-sign-button{
+        height: calc(27.5vw / 3);
+    }
+    .page-title{
+        padding-top: 20vh;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .page-title{
+        padding-top: 30vh;
+    }
+    :root{
+        font-size: 1.5vw;
+    }
+}

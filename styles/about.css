@@ -1,0 +1,101 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #5B0888;
+}
+
+.element{
+
+    margin: auto;
+
+    border: 2px #5B0888 solid;
+    border-radius: 2%;
+    background-color: #e3c1fd;
+    padding: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+
+.team{
+    width: 30%;
+}
+.team img{
+    max-width: 80%;
+    width: 150px;
+    height: 200px;
+    border: 2px #5B0888 solid;
+    border-radius: 10%;
+    margin-top: 15px;
+}
+
+.idea{
+    width: 50%;
+}
+
+.scale{
+    width: 50%;
+}
+
+.section-title{
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+hr{
+    width: 90%;
+    margin: auto;
+    height: 3px;
+    background-color: #5B0888;
+    border-color: #5B0888;
+    border-radius: 2px;
+}
+
+.animated-Char{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.element:hover{
+    cursor: pointer;
+    animation: CardHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+.element:not(:hover){
+    animation: CardEndHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes CardHover{
+    0%{
+    }
+
+    100%{
+        transform: scale(105%, 105%);
+    }
+}
+@keyframes CardEndHover{
+    0%{
+        transform: scale(105%, 105%);
+    }
+
+    100%{
+        transform: scale(100%, 100%);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .idea{
+        width: 70%;
+    }
+    .scale{
+        width: 70%;
+    }
+    .team{
+        width: 50%;
+    }
+}

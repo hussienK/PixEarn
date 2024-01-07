@@ -1,0 +1,281 @@
+.grid{
+    margin: 3vw 5vw;
+    background-color: #E5CFF7;
+    border-radius: 1% 1%;
+
+}
+.grid-settings{
+    border: 2px #5B0888 solid;
+    background-color: #E5CFF7;
+    border-radius: 1% 1%;
+
+    width: 100%;
+    min-height: 90px;
+}
+
+/*Styling the grid and it's content*/
+.GridForItems{
+    font-size: 16px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+    padding: 1vw;
+}
+.GridItem{
+    padding: 1vw;
+    margin: auto;
+    min-width: 325px;
+    max-width: 325px;
+    min-height: 500px;
+    max-height: 500px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #713ABC;
+    color: #E5CFF7;
+    border: 3px #5B0888 solid;
+    border-radius: 10%;
+}
+.GridItem h2{
+    font-size: 30px;
+    width: 90%;
+}
+.GridItem img{
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 2px #5B0888 solid;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.reward{
+    color: #948b9c;
+    font-weight: bold;
+}
+.GridItem button{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #E5CFF7;
+    color: #5B0888;
+    border-color: #5B0888;
+    box-shadow: none;
+    width: 150px;
+    height: 75px;
+}
+.GridItem button:hover{
+    background-color: #5B0888;
+    color: #E5CFF7;
+    cursor: pointer;
+}
+.GridItem h2{
+    display: inline;
+}
+.GridItem:hover{
+    animation: CardHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+.GridItem:not(:hover){
+    animation: CardEndHover .25s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes CardHover{
+    0%{
+    }
+
+    100%{
+        transform: scale(105%, 105%);
+    }
+}
+@keyframes CardEndHover{
+    0%{
+        transform: scale(105%, 105%);
+    }
+
+    100%{
+        transform: scale(100%, 100%);
+    }
+}
+/*End of styling the grid and it's items*/
+
+/*Styling the price input place*/
+.price-input{
+    width: 500px;
+    display: flex;
+    margin: 0 0 13px;
+  }
+  .price-input .field{
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .field input{
+    width: 80px;
+    height: 100%;
+    outline: none;
+    font-size: 19px;
+    margin-left: 14px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #999;
+    appearance: textfield;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  .slider{
+    height: 5px;
+    position: relative;
+    background: white;
+    border-radius: 5px;
+  }
+  .slider .progress{
+    height: 100%;
+    left: 0%;
+    right: 0%;
+    position: absolute;
+    border-radius: 5px;
+    background: #17A2B8;
+  }
+  .range-input{
+    position: relative;
+  }
+  .range-input input{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: -5px;
+    background: none;
+    pointer-events: none;
+    appearance: none;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background: #17A2B8;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  }
+  input[type="range"]::-moz-range-thumb{
+    height: 17px;
+    width: 17px;
+    border: none;
+    border-radius: 50%;
+    background: #17A2B8;
+    pointer-events: auto;
+    -moz-appearance: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+  }
+  /*End of styling price input place*/
+
+  /*styling the grid settings items*/
+  .sorting{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .grid-settings{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .filtering{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+  }
+
+  #type{
+    width: 100px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .pricing{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .filtering button{
+    margin-left: 15px;
+    width: 80px;
+    height: 30px;
+    color: #5B0888;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px #5B0888 solid;
+  }
+  .filtering button:hover{
+    background-color: #5B0888;
+    color: #E5CFF7;
+    cursor: pointer;
+  }
+
+  #sort{
+    width: 200px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  
+@media screen and (max-width: 1200px) {
+  .GridForItems{
+      grid-template-columns: 1fr 1fr;
+  }
+  .filtering{
+    flex-direction: column;
+  }
+  .pricing{
+    margin: 15px 0;
+  }
+  .filtering select{
+    margin-top: 15px;
+  }
+  .filtering button{
+    margin-bottom: 15px;
+  }
+}
+
+@media  screen and (max-width: 810px) {
+  .GridForItems{
+      grid-template-columns: 1fr;
+  }
+  .grid-settings{
+    flex-direction: column-reverse;
+  }
+  .sorting{
+    margin-top: 15px;
+    justify-content: center;
+  }
+  .price-input{
+    width: 250px;
+  }
+
+  .GridItem{
+    min-width: 100px;
+    min-height: 200px;
+  }
+  .GridItem img{
+    height: 150px;
+  }
+}
+@media  screen and (min-width: 1600px) {
+  .GridForItems{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
