@@ -15,7 +15,7 @@ Visit [Pixearn](https://hussienk.github.io/PixEarn/index.html) to explore the we
 ## Screenshots
 
 ### Homepage
-![Homepage](image.png)
+![Homepage](image3.png)
 
 ### Shop Interface
 ![Shop Interface](image1.png)
