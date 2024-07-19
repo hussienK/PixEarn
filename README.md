@@ -15,10 +15,10 @@ Visit [Pixearn](https://hussienk.github.io/PixEarn/index.html) to explore the we
 ## Screenshots
 
 ### Homepage
-![Homepage](image3.png)
+![Homepage](image.png)
 
 ### Shop Interface
-![Shop Interface](image1.png)
+![Shop Interface](image_1.png)
 
 ### Game Play
-![Game Play](image2.png)
+![Game Play](image_2.png)
