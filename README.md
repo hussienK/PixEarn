@@ -10,7 +10,7 @@ Pixen is a web platform where users can play JavaScript-based games to earn coin
 
 ## Try It Out
 
-Visit [Pixen]([https://hussienk.github.io/PixEarn/index.html]) to explore the website.
+Visit [Pixearn](https://hussienk.github.io/PixEarn/index.html) to explore the website.
 
 ## Screenshots
 
